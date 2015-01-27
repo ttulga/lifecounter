@@ -14,7 +14,6 @@ public class MainActivity extends ActionBarActivity {
     private int p2 = 20;
     private int p3 = 20;
     private int p4 = 20;
-    boolean start = false;
     private String losers = "";
 
     @Override
@@ -51,9 +50,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 1 plus 1
         p1plus1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p1 > 0) {
+               if (p1 > 0) {
                     p1++;
                     p1Life.setText("Player 1: " + p1);
                 }
@@ -63,12 +60,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 1 minus 1
         p1min1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p1 > 0) {
+               if (p1 > 0) {
                     p1--;
                     p1Life.setText("Player 1: " + p1);
-                } if (start && (p1 <= 0)) { // Games started and life 0
+                } if (p1 <= 0) {
                     losersList.setText(losers + " Player 1 LOSES!");
                     losers = "" + losersList.getText();
                     p1plus1.setEnabled(false);
@@ -82,9 +77,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 1 plus 5
         p1plus5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p1 > 0) {
+                if (p1 > 0) {
                     p1+=5;
                     p1Life.setText("Player 1: " + p1);
                 }
@@ -94,12 +87,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 1 minus 5
         p1min5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p1 > 0) {
+               if (p1 > 0) {
                     p1-=5;
                     p1Life.setText("Player 1: " + p1);
-                } if (start && (p1 <= 0)) { // Games started and life 0
+                } if (p1 <= 0) {
                     losersList.setText(losers + " Player 1 LOSES!");
                     losers = "" + losersList.getText();
                     p1plus1.setEnabled(false);
@@ -113,9 +104,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 2 plus 1
         p2plus1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p2 > 0) {
+               if (p2 > 0) {
                     p2++;
                     p2Life.setText("Player 2: " + p2);
                 }
@@ -125,12 +114,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 2 minus 1
         p2min1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p2 > 0) {
+                if (p2 > 0) {
                     p2--;
                     p2Life.setText("Player 2: " + p2);
-                } if (start && (p2 <= 0)) { // Games started and life 0
+                } if (p2 <= 0) {
                     losersList.setText(losers + " Player 2 LOSES!");
                     losers = "" + losersList.getText();
                     p2plus1.setEnabled(false);
@@ -144,9 +131,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 2 plus 5
         p2plus5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p2 > 0) {
+               if (p2 > 0) {
                     p2+=5;
                     p2Life.setText("Player 2: " + p2);
                 }
@@ -156,12 +141,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 2 minus 5
         p2min5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p2 > 0) {
+                if (p2 > 0) {
                     p2-=5;
                     p2Life.setText("Player 2: " + p2);
-                } if (start && (p2 <= 0)) { // Games started and life 0
+                } if (p2 <= 0) {
                     losersList.setText(losers + " Player 2 LOSES!");
                     losers = "" + losersList.getText();
                     p2plus1.setEnabled(false);
@@ -175,9 +158,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 3 plus 1
         p3plus1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p3 > 0) {
+                if (p3 > 0) {
                     p3++;
                     p3Life.setText("Player 3: " + p3);
                 }
@@ -187,12 +168,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 3 minus 1
         p3min1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p3 > 0) {
+                if (p3 > 0) {
                     p3--;
                     p3Life.setText("Player 3: " + p3);
-                } if (start && (p3 <= 0)) { // Games started and life 0
+                } if (p3 <= 0) {
                     losersList.setText(losers + " Player 3 LOSES!");
                     losers = "" + losersList.getText();
                     p3plus1.setEnabled(false);
@@ -206,9 +185,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 3 plus 5
         p3plus5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p3 > 0) {
+                if (p3 > 0) {
                     p3+=5;
                     p3Life.setText("Player 3: " + p3);
                 }
@@ -218,12 +195,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 3 minus 5
         p3min5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p3 > 0) {
+                if (p3 > 0) {
                     p3-=5;
                     p3Life.setText("Player 3: " + p3);
-                } if (start && (p3 <= 0)) { // Games started and life 0
+                } if (p3 <= 0) {
                     losersList.setText(losers + " Player 3 LOSES!");
                     losers = "" + losersList.getText();
                     p3plus1.setEnabled(false);
@@ -237,9 +212,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 4 plus 1
         p4plus1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p4 > 0) {
+                if (p4 > 0) {
                     p4++;
                     p4Life.setText("Player 4: " + p4);
                 }
@@ -249,12 +222,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 4 minus 1
         p4min1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p4 > 0) {
+                if (p4 > 0) {
                     p4--;
                     p4Life.setText("Player 4: " + p4);
-                } if (start && (p4 <= 0)) { // Games started and life 0
+                } if (p4 <= 0) {
                     losersList.setText(losers + " Player 4 LOSES!");
                     losers = "" + losersList.getText();
                     p4plus1.setEnabled(false);
@@ -268,9 +239,7 @@ public class MainActivity extends ActionBarActivity {
         // Player 4 plus 5
         p4plus5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p4 > 0) {
+                if (p4 > 0) {
                     p4+=5;
                     p4Life.setText("Player 4: " + p4);
                 }
@@ -280,12 +249,10 @@ public class MainActivity extends ActionBarActivity {
         // Player 4 minus 5
         p4min5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (!start) {
-                    start = true;
-                } if (p4 > 0) {
+                if (p4 > 0) {
                     p4-=5;
                     p4Life.setText("Player 4: " + p4);
-                } if (start && (p4 <= 0)) { // Games started and life 0
+                } if (p4 <= 0) {
                     losersList.setText(losers + " Player 4 LOSES!");
                     losers = "" + losersList.getText();
                     p4plus1.setEnabled(false);
